@@ -1,6 +1,6 @@
 const {model,Schema} =require("mongoose");
 const  uniqueValidator = require('mongoose-unique-validator');
-const { verify } = require("../../controllers/user");
+
 
 const UserSchema = new Schema({
     fullname:{
@@ -83,6 +83,13 @@ const UserSchema = new Schema({
     paid:{
         type:String,
         default:false
+    },
+    activeplan:{
+        type:Boolean,
+        default:false
+    },
+    planDetails:{
+        type:Object
     }
 
 })
